@@ -1,0 +1,2 @@
+cd E:\Automation_Priyanka_VCTC\Priyanka_VCTC\QaFox_BDD_Automation
+mvn test

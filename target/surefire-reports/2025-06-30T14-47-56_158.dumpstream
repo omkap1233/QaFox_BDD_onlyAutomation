@@ -1,0 +1,5 @@
+# Created at 2025-06-30T14:47:56.670
+Boot Manifest-JAR contains absolute paths in classpath 'E:\Automation_Priyanka_VCTC\Priyanka_VCTC\QaFox_BDD_Automation\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
