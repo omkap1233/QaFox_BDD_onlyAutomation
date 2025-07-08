@@ -26,3 +26,10 @@ Then User should be redirected to my account page as "My Account"
 Examples:
 |Email addess             |Password  |
 |priya.patil6614@gmail.com|Piyu@1903 |
+
+
+Scenario:Checkout feature functionality of homepage
+Given User is at homepage of QaFox
+When User Clicks on cannonEOS
+Then User able to seebeand name of cannon as "Canon"
+  

@@ -35,6 +35,10 @@ public class Homepage {
 	@FindBy(xpath = "//h2[text()='My Account']")
 	private WebElement myaccpage;
 
+	@FindBy(xpath="//a[text()='Canon EOS 5D']") private WebElement cannonEOS;
+	@FindBy(xpath="//a[text()='Canon']") private WebElement cannonBrandname;
+	
+	
 	public Homepage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -92,5 +96,17 @@ public class Homepage {
 	public String VerifyMyAccountPage() {
 		String ActualMyAcc = myaccpage.getText();
 		return ActualMyAcc;
+	}
+	
+	public void clickOnCannonEOS() {
+		
+		cannonEOS.click();
+	}
+	
+	public String  getTextOfCannonBrandname() {
+		
+		String brandname= cannonBrandname.getText();
+		
+		return brandname;
 	}
 }

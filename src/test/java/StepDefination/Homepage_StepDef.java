@@ -33,7 +33,7 @@ public class Homepage_StepDef {
 
 		boolean ActaulResult = Hp.VerifyShoppingCartIcon();
 		Assert.assertTrue(ActaulResult);
-		
+
 	}
 
 	@When("User clicks on iphone of featured option")
@@ -43,10 +43,10 @@ public class Homepage_StepDef {
 
 	@Then("User able to see brand name of iphone as {string}")
 	public void user_able_to_see_brand_name_of_iphone_as(String ExpectedBrandname) {
-		
-		String ActualBrandname= Hp.VerifyBrandNameOfiphone();
+
+		String ActualBrandname = Hp.VerifyBrandNameOfiphone();
 		Assert.assertEquals(ActualBrandname, ExpectedBrandname);
-		
+
 	}
 
 	@When("User clicks on My account dropdown")
@@ -65,10 +65,10 @@ public class Homepage_StepDef {
 	public void user_enter_login_credentials_as_and(String EM, String PSW) throws InterruptedException {
 
 		Hp.EnterEmailAddress(EM);
-		
+
 		Thread.sleep(2000);
 		Hp.EnterPassword(PSW);
-		
+
 	}
 
 	@When("User clicks on login button")
@@ -78,9 +78,24 @@ public class Homepage_StepDef {
 
 	@Then("User should be redirected to my account page as {string}")
 	public void user_should_be_redirected_to_my_account_page_as(String ExpectedPage) {
-		String ActualPage= Hp.VerifyMyAccountPage();
+		String ActualPage = Hp.VerifyMyAccountPage();
 		Assert.assertEquals(ActualPage, ExpectedPage);
-	
+
+	}
+
+	@When("User Clicks on cannonEOS")
+	public void user_clicks_on_cannon_eos() {
+
+		Hp.clickOnCannonEOS();
+
+	}
+
+	@Then("User able to seebeand name of cannon as {string}")
+	public void user_able_to_seebeand_name_of_cannon_as(String ExpectedBrandName) {
+		String ActualBrandName = Hp.getTextOfCannonBrandname();
+		
+		Assert.assertEquals(ActualBrandName, ExpectedBrandName);
+
 	}
 
 }
