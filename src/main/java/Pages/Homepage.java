@@ -73,7 +73,7 @@ public class Homepage {
 	}
 
 	public void ClickOnMyAccountDropdown() {
-		WebElement MyAccDP= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='My Account']")));
+		WebElement MyAccDP= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']")));
 		MyAccDP.click();
 	}
 
