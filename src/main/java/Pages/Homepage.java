@@ -42,7 +42,7 @@ public class Homepage {
 	public Homepage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	}
 
@@ -73,7 +73,8 @@ public class Homepage {
 	}
 
 	public void ClickOnMyAccountDropdown() {
-		Myacc.click();
+		WebElement MyAccDP= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='My Account']")));
+		MyAccDP.click();
 	}
 
 	public void clickOnLoginOption() {
